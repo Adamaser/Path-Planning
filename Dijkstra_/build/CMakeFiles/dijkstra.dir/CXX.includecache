@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Dijkstra.h
+iostream
+-
+vector
+-
+limits
+-
+
+/home/chen/basis/Dijkstra_/main.cpp
+iostream
+-
+Dijkstra.h
+-
+
+/home/chen/basis/Dijkstra_/src/Dijkstra.cpp
+Dijkstra.h
+/home/chen/basis/Dijkstra_/src/Dijkstra.h
+

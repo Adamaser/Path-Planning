@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/chen/basis/Dijkstra_/build",
+  "command": "/usr/bin/g++   -I/home/chen/basis/Dijkstra_/include  -g   -o CMakeFiles/dijkstra.dir/main.cpp.o -c /home/chen/basis/Dijkstra_/main.cpp",
+  "file": "/home/chen/basis/Dijkstra_/main.cpp"
+},
+{
+  "directory": "/home/chen/basis/Dijkstra_/build",
+  "command": "/usr/bin/g++   -I/home/chen/basis/Dijkstra_/include  -g   -o CMakeFiles/dijkstra.dir/src/Dijkstra.cpp.o -c /home/chen/basis/Dijkstra_/src/Dijkstra.cpp",
+  "file": "/home/chen/basis/Dijkstra_/src/Dijkstra.cpp"
+}
+]

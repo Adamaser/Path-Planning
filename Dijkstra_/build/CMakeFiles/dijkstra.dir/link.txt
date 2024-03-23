@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/dijkstra.dir/main.cpp.o CMakeFiles/dijkstra.dir/src/Dijkstra.cpp.o  -o dijkstra 
