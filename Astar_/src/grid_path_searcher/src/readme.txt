@@ -1,0 +1,4 @@
+generate_map.cpp 可以在pcd文件夹下生成名为complex_point.pcd的点云文件
+Astar.cpp 为Astar算法实现的核心代码
+Astar_node.cpp 为Astar节点配置与话题映射文件
+complex_map.cpp 将pcb文件发布为点云话题

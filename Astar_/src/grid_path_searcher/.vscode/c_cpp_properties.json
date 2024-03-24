@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/chen/ws_caric/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/chen/ws_caric/src/caric_baseline-main/include/**",
+        "/home/chen/ws_caric/src/caric_mission/include/**",
+        "/home/chen/ws_caric/src/rotors_simulator/mav_lowlevel_attitude_controller/include/**",
+        "/home/chen/ws_caric/src/rotors_simulator/mav_comm/mav_msgs/include/**",
+        "/home/chen/ws_caric/src/rotors_simulator/mav_comm/mav_planning_msgs/include/**",
+        "/home/chen/ws_caric/src/rotors_simulator/rotors_control/include/**",
+        "/home/chen/ws_caric/src/rotors_simulator/rotors_gazebo_plugins/include/**",
+        "/home/chen/ws_caric/src/rotors_simulator/rotors_hil_interface/include/**",
+        "/home/chen/ws_caric/src/rotors_simulator/rotors_joy_interface/include/**",
+        "/home/chen/ws_caric/src/traj_gennav/include/**",
+        "/home/chen/ws_caric/src/unicon/include/**",
+        "/home/chen/ws_caric/src/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,49 @@
+<launch>
+
+<arg name="map_size_x" default="20"/>   
+<arg name="map_size_y" default="20"/>
+<arg name="map_size_z" default="5.0"/>
+
+<arg name="start_x" default=" 0.0"/>
+<arg name="start_y" default=" 0.0"/>
+<arg name="start_z" default=" 1.0"/>
+
+<arg name="distance" default="euclidean"/> <!--　euclidean  manhattan-->
+<arg name="weight_a" default=" 1.0"/>      
+<arg name="weight_b" default=" 1.0"/>
+
+<!-- <arg name="pcd_path" default="$(find grid_path_searcher)/pcd/low_Mesh.pcd"/>  -->
+<arg name="pcd_path" default="/home/chen/UAV_class_ws/Astar_/src/grid_path_searcher/pcd/map.pcd"/> 
+
+  <node pkg="grid_path_searcher" type="astar_demo" name="astar_demo" output="screen" required = "true">
+      <remap from="~waypoints"       to="/waypoint_generator/waypoints"/>
+      <remap from="~map"             to="/complex_map/global_map"/> 
+
+      <param name="map/margin"       value="0.0" />
+      <param name="map/resolution"   value="3.0" />
+      <param name="map/x_size"       value="$(arg map_size_x)"/>
+      <param name="map/y_size"       value="$(arg map_size_y)"/>
+      <param name="map/z_size"       value="$(arg map_size_z)"/>
+
+      <param name="planning/start_x" value="$(arg start_x)"/>
+      <param name="planning/start_y" value="$(arg start_y)"/>
+      <param name="planning/start_z" value="$(arg start_z)"/>
+	  
+      <param name="heuristic/distance" value="$(arg distance)"/>
+      <param name="weight/a" value="$(arg weight_a)"/>
+      <param name="weight/b" value="$(arg weight_b)"/>
+  </node>
+
+  <node pkg ="grid_path_searcher" name ="complex_map" type ="complex_map" output = "screen">      
+      <param name="pcd_path"   value="$(arg pcd_path)"/>        
+      <param name="sensing/rate"   value="0.5"/>        
+  </node>
+
+  <node pkg="waypoint_generator" name="waypoint_generator" type="waypoint_generator" output="screen">
+      <remap from="~goal" to="/goal"/>
+      <param name="waypoint_type" value="manual-lonely-waypoint"/>    
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find grid_path_searcher)/rviz/test.rviz" />
+
+</launch>
