@@ -9,3 +9,4 @@ Path Planning Code Package, Continuously Updated, including the following Algori
 4. RRT(MATLAB)
 5. D*(MATLAB)
 6. LPA*(MATLAB)
+7. D*lite(MATLAB)
